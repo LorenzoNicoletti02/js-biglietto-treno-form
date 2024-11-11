@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.col-md-8 {
+    width: 100%;
+    max-width: 800px;  /* Impostiamo una larghezza massima per il modulo */
+}
+
+.result-box {
+    padding: 20px;
+    background-color: #e9ecef;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Allineamento orizzontale e spaziatura tra gli input */
+.row {
+    display: flex;
+    justify-content: space-between; /* Distanza uniforme tra gli input */
+    gap: 15px; /* Spazio tra gli input */
+}
+
+.form-group {
+    margin-bottom: 0;
+    width: 100%;
+}
+
+.form-control {
+    width: 100%;
+}
+
+/* Pulsanti sotto il modulo, centrati */
+.text-center button {
+    width: 120px;
+    margin: 10px;
+}
+
+/* Media Query per schermi più piccoli */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column; /* Disporre i campi in colonna su dispositivi piccoli */
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-control {
+        width: 100%; /* Ogni campo di input prende tutta la larghezza disponibile */
+        max-width: 100%;
+    }
+
+    .text-center button {
+        width: 100%; /* Pulsante a larghezza completa su dispositivi mobili */
+        margin: 5px 0;
+    }
+}

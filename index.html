@@ -1,54 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calcolatore Prezzo Biglietto</title>
+    <!-- Link al CSS esterno -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Link a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <h2 class="text-center mb-4">Calcolatore Prezzo Biglietto</h2>
-            <form id="ticketForm">
-                <div class="row">
-                    <!-- Nome Cognome -->
-                    <div class="form-group col-md-4">
-                        <label for="nameInput">Nome Cognome:</label>
-                        <input type="text" class="form-control" id="nameInput" required>
-                    </div>
-
-                    <!-- Chilometri -->
-                    <div class="form-group col-md-4">
-                        <label for="kmInput">Chilometri:</label>
-                        <input type="number" class="form-control" id="kmInput" required>
-                    </div>
-
-                    <!-- Età -->
-                    <div class="form-group col-md-4">
-                        <label for="ageInput">Età:</label>
-                        <input type="number" class="form-control" id="ageInput" required>
-                    </div>
+<div class="container d-flex justify-content-center align-items-center min-vh-100">
+    <div class="col-md-8">
+        <h2 class="text-center mb-4">Calcolatore Prezzo Biglietto</h2>
+        <form id="ticketForm">
+            <!-- RIGA ORIZZONTALE con distanziamento uguale tra i campi -->
+            <div class="row justify-content-between">
+                <!-- Nome Cognome -->
+                <div class="form-group col-md-3">
+                    <label for="nameInput" class="mr-2">Nome Cognome:</label>
+                    <input type="text" class="form-control" id="nameInput" required>
                 </div>
 
-                <!-- Pulsanti Genera e Annulla -->
-                <div class="text-center mt-4">
-                    <button type="submit" class="btn btn-primary" id="generateButton">Genera</button>
-                    <button type="reset" class="btn btn-secondary ml-2" id="cancelButton">Annulla</button>
+                <!-- Chilometri -->
+                <div class="form-group col-md-3">
+                    <label for="kmInput" class="mr-2">Chilometri:</label>
+                    <input type="number" class="form-control" id="kmInput" required>
                 </div>
-            </form>
 
-            <div id="result" class="result-box mt-4" style="display: none;">
-                <h4>Il prezzo del biglietto è: <span id="ticketPrice">0.00</span> €</h4>
+                <!-- Età -->
+                <div class="form-group col-md-3">
+                    <label for="ageInput" class="mr-2">Età:</label>
+                    <input type="number" class="form-control" id="ageInput" required>
+                </div>
             </div>
+
+            <!-- Pulsanti Genera e Annulla -->
+            <div class="text-center mt-4">
+                <button type="submit" class="btn btn-primary" id="generateButton">Genera</button>
+                <button type="reset" class="btn btn-secondary ml-2" id="cancelButton">Annulla</button>
+            </div>
+        </form>
+
+        <div id="result" class="result-box mt-4" style="display: none;">
+            <h4>Il prezzo del biglietto è: <span id="ticketPrice">0.00</span> €</h4>
         </div>
     </div>
 </div>
 
+<!-- Link a jQuery e Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+<!-- Link al file JS esterno -->
+<script src="script.js"></script>
 
 </body>
 </html>
